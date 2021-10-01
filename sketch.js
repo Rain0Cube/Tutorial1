@@ -12,14 +12,14 @@ function setup() {
   // Earth
   noStroke();
   theEarth = sphere(50,0,4)
-	theEarth.rotation.y = 0.0;
+  theEarth.rotation.y = 0.0;
   theEarth.texture("jpg/earth-color.jpg")
   theEarth.receiveShadow = true;
   theEarth.rotation.x = -0.4101524; //x is z
 
   stroke('white');
   line_axis = line(0,-200,0,200,0,0);
-	theEarth.add( line_axis );
+  theEarth.add( line_axis );
 
   // makes an x-y-z coordinate axis
   stroke('red');
@@ -54,7 +54,7 @@ function setup() {
 function draw() {
   //Earth
   theEarth.position.x = 50*Math.sin(frameCount *18 * .0005);
-  theEarth.position.z = -50*Math.cos(frameCount *18 * .0005); //Note z-coordinate is all inverted in order to compatible for 2D Mode
+  theEarth.position.z = -50*Math.cos(frameCount *18 * .0005);
 
-	theEarth.rotation.y = frameCount *18 * .005;
+  theEarth.rotation.y = frameCount *18 * .005;
 }
